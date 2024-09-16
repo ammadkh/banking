@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Horizon",
@@ -14,5 +14,19 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <main>{children}</main>;
+  return (
+    <main className="flex min-h-screen w-full justify-between font-inter">
+      {children}
+      <div className="auth-asset">
+        <div>
+          <Image
+            src="/icons/auth-image.svg"
+            width={500}
+            height={500}
+            alt="auth"
+          />
+        </div>
+      </div>
+    </main>
+  );
 }
