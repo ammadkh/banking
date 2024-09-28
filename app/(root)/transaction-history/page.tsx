@@ -20,7 +20,6 @@ export default async function TransactionHistory({
   const accountsData = accounts?.data;
   const appwriteItemId = (id as string) || accountsData[0]?.appwriteItemId;
   const account = await getAccount({ appwriteItemId });
-  console.log(account, "accoun");
 
   const rowsPerPage = 10;
   const totalPages = Math.ceil(account.transactions?.length / rowsPerPage);

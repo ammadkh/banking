@@ -10,7 +10,6 @@ export default async function MyBanks() {
   const accounts = await getAccounts({
     userId: loggedIn?.$id,
   });
-  console.log(accounts, "cc");
   return (
     <section className="flex">
       <div className="my-banks">

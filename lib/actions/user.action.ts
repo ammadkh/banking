@@ -57,7 +57,6 @@ export const signUp = async({password, ...userData}: SignUpParams) => {
 
       newUserAccount = await account.create(ID.unique(), email, password, `${firstName} ${lastName}`);
       if(!newUserAccount) throw new Error('Error creating user');
-console.log(userData, 'user data')
         const dwollaCustomerUrl = await createDwollaCustomer({
             ...userData,
             type: 'personal'
@@ -181,7 +180,6 @@ export const exchangePublicToken = async({publicToken, user}: exchangePublicToke
 export const getBanks = async({userId}: getBanksProps) => {
     try {
         const  {database} = await createAdminClient();
-        console.log(database, 'database')
         const banks = await database.listDocuments(DATABASE_ID!, BANK_COLLECTION_ID!, [Query.equal('userId', [userId])]);
     return  parseStringify(banks.documents)
     } catch(error) {
@@ -215,7 +213,6 @@ export async function getLoggedInUser() {
       const { account } = await createSessionClient();
       const result = await account.get();
       const user = await getUserInfo({userId: result?.$id});
-      console.log(user, 'kl')
       return parseStringify(user);
     } catch (error) { 
       return null;

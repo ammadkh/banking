@@ -38,7 +38,6 @@ function AuthForm({ type }: { type: string }) {
           email: values.email,
           password: values.password,
         });
-        console.log(response, "ddd");
         if (response) router.push("/");
       } else {
         const userData = {
