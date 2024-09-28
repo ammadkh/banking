@@ -3,8 +3,8 @@ import { type ClassValue, clsx } from "clsx";
 import qs from "query-string";
 import { twMerge } from "tailwind-merge";
 import { z } from "zod";
-import { getLoggedInUser } from "./appwrite";
 import { redirect } from "next/navigation";
+import { getLoggedInUser } from "./actions/user.action";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
