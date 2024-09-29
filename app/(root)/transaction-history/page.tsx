@@ -1,4 +1,4 @@
-import Headerbox from "@/components/Headerbox";
+import Headerbox from "@/components/HeaderBox";
 import { Pagination } from "@/components/Pagination";
 import TransactionTable from "@/components/TransactionTable";
 import { getAccount, getAccounts } from "@/lib/actions/bank.actions";
