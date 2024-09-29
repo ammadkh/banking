@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BankTabItem } from "./BankItemType";
 import BankInfo from "./BankInfo";
 import TransactionTable from "./TransactionTable";
-import { Pagination } from "./pagination";
+import { Pagination } from "./Pagination";
 
 function RecentTransactions({
   accounts,
